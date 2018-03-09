@@ -19,7 +19,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/foz_do_iguacu_pr" />
+        app:srcCompat="@drawable/foz_do_iguacu_pr"
+        tools:src="@sample/pacote.json/pacotes/imagem"
+        />
 
     <TextView
         android:id="@+id/textView"
@@ -37,7 +39,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/item_foto"
         app:layout_constraintTop_toTopOf="@+id/item_foto"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:src="@sample/pacote.json/pacotes/local"/>
 
     <View
         android:id="@+id/item_divisor"
@@ -60,6 +63,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         android:textSize="16sp"
         android:textStyle="bold"
+        tools:src="@sample/pacote.json/pacotes/dias"
         />
 
 
@@ -75,6 +79,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@android:color/holo_green_dark"
+        tools:src="@sample/pacote.json/pacotes/preco"
         />
 
 </android.support.constraint.ConstraintLayout>
