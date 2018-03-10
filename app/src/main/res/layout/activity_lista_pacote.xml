@@ -56,6 +56,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         tools:listitem="@layout/item_pacote"
+        android:divider="@null"
+        android:dividerHeight="0dp"
         />
 
 </android.support.constraint.ConstraintLayout>

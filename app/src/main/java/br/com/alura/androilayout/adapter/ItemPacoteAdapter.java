@@ -49,14 +49,28 @@ public class ItemPacoteAdapter extends BaseAdapter {
 
     @Override
     public View getView(int index, View view, ViewGroup paarent) {
+
         View itemPacoteView = LayoutInflater.from(context).inflate(R.layout.item_pacote, paarent, false);
+
         Pacote pacote = getItem(index);
 
         PacoteHolder pacoteHolder = new PacoteHolder(itemPacoteView);
         pacoteHolder.local.setText(pacote.getLocal());
-        String dias = pacote.getDias() >= 1 ? " Dia" : " Dias";
-        pacoteHolder.dias.setText(pacote.getDias() + dias);
+        formatarDias(pacote, pacoteHolder);
+        formatarValor(pacote, pacoteHolder);
+        recuperarImagem(pacote, pacoteHolder);
 
+        return itemPacoteView;
+    }
+
+    private void recuperarImagem(Pacote pacote, PacoteHolder pacoteHolder) {
+        Resources resources = context.getResources();
+        int identifier = resources.getIdentifier(pacote.getImagem(), "drawable", context.getPackageName());
+        Drawable drawable = resources.getDrawable(identifier);
+        pacoteHolder.imagem.setImageDrawable(drawable);
+    }
+
+    private void formatarValor(Pacote pacote, PacoteHolder pacoteHolder) {
         NumberFormat formatoBrasileiro = DecimalFormat.getCurrencyInstance(
                 new Locale("pt", "br"));
         String moedaBrasileira = formatoBrasileiro
@@ -64,15 +78,11 @@ public class ItemPacoteAdapter extends BaseAdapter {
                 .replace("R$", "R$ ");
 
         pacoteHolder.valor.setText(moedaBrasileira);
+    }
 
-        Resources resources = context.getResources();
-        int identifier = resources.getIdentifier(pacote.getImagem(), "drawable", context.getPackageName());
-        Drawable drawable = resources.getDrawable(identifier);
-        pacoteHolder.imagem.setImageDrawable(drawable);
-
-
-
-        return itemPacoteView;
+    private void formatarDias(Pacote pacote, PacoteHolder pacoteHolder) {
+        String dias = pacote.getDias() >= 1 ? " Dia" : " Dias";
+        pacoteHolder.dias.setText(pacote.getDias() + dias);
     }
 
 
