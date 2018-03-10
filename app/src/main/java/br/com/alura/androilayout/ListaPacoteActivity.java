@@ -1,19 +1,14 @@
 package br.com.alura.androilayout;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.zip.Inflater;
 
 import br.com.alura.androilayout.adapter.ItemPacoteAdapter;
 import br.com.alura.androilayout.dao.PacoteDao;
 import br.com.alura.androilayout.model.Pacote;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import butterknife.OnItemClick;
 
 public class ListaPacoteActivity extends AppCompatActivity {
@@ -25,6 +20,7 @@ public class ListaPacoteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_pacote);
+
         ButterKnife.bind(this);
 
         listaPacoteView.setAdapter(new ItemPacoteAdapter(this, new PacoteDao().lista()));
