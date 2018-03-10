@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,9 +14,11 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -42,7 +43,6 @@
                 android:layout_margin="8dp"
                 android:background="@android:drawable/screen_background_dark_transparent"
                 android:padding="8dp"
-                tools:text="Foz do Iguaçu"
                 android:textColor="@android:color/white"
                 android:textSize="14sp"
                 android:textStyle="bold"
@@ -52,7 +52,8 @@
                 app:layout_constraintStart_toStartOf="@+id/item_foto"
                 app:layout_constraintTop_toTopOf="@+id/item_foto"
                 app:layout_constraintVertical_bias="1.0"
-                tools:src="@sample/pacote.json/pacotes/local" />
+                tools:src="@sample/pacote.json/pacotes/local"
+                tools:text="Foz do Iguaçu" />
 
             <View
                 android:id="@+id/item_divisor"
@@ -68,21 +69,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                tools:text="2 dias"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/item_divisor"
-                tools:src="@sample/pacote.json/pacotes/dias" />
+                tools:src="@sample/pacote.json/pacotes/dias"
+                tools:text="2 dias" />
 
             <TextView
                 android:id="@+id/item_valor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                tools:text="R$ 246,99"
                 android:textColor="@android:color/holo_green_dark"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -91,7 +91,8 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/item_dias"
                 app:layout_constraintTop_toBottomOf="@+id/item_dias"
-                tools:src="@sample/pacote.json/pacotes/preco" />
+                tools:src="@sample/pacote.json/pacotes/preco"
+                tools:text="R$ 246,99" />
 
         </android.support.constraint.ConstraintLayout>
 
