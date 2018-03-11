@@ -1,5 +1,6 @@
 package br.com.alura.androilayout;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -60,6 +61,10 @@ public class ResumoPacoteActivity extends AppCompatActivity {
 
     @OnClick(R.id.resumo_pacote_realizar_pagamento)
     public void onClickRealizarpagamento(){
+
+        Intent irPagamento = new Intent(this, PagamentoActivity.class);
+        irPagamento.putExtra("pacote", pacoteSelecionado);
+        startActivity(irPagamento);
 
     }
 

@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ResumoPacoteActivity"></activity>
+        <activity android:name=".ResumoPacoteActivity" />
+        <activity android:name=".PagamentoActivity"></activity>
     </application>
 
 </manifest>
