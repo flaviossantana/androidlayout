@@ -2,6 +2,7 @@ package br.com.alura.androilayout;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,6 +16,7 @@ import br.com.alura.androilayout.model.Pacote;
 import br.com.alura.androilayout.util.MoedaUtil;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class ResumoPacoteActivity extends AppCompatActivity {
 
@@ -33,6 +35,10 @@ public class ResumoPacoteActivity extends AppCompatActivity {
     @BindView(R.id.resumo_pacote_preco_final)
     TextView precoFinal;
 
+    @BindView(R.id.resumo_pacote_realizar_pagamento)
+    Button realizarPagamentoBtn;
+
+    private Pacote pacoteSelecionado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,13 +48,19 @@ public class ResumoPacoteActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         Bundle extras = getIntent().getExtras();
-        Pacote pacote = (Pacote) extras.getSerializable("pacote");
+        pacoteSelecionado = (Pacote) extras.getSerializable("pacote");
 
-        local.setText(pacote.getLocal());
-        dias.setText(DiaUtil.formatarDias(pacote.getDias()));
-        precoFinal.setText(MoedaUtil.formatarValor(pacote.getValor()));
-        imagem.setImageDrawable(ImagemUtil.recuperarImagem(this, pacote.getImagem()));
-        periodo.setText(DiaUtil.formataPeriodo(pacote.getDias()));
+        local.setText(pacoteSelecionado.getLocal());
+        dias.setText(DiaUtil.formatarDias(pacoteSelecionado.getDias()));
+        precoFinal.setText(MoedaUtil.formatarValor(pacoteSelecionado.getValor()));
+        imagem.setImageDrawable(ImagemUtil.recuperarImagem(this, pacoteSelecionado.getImagem()));
+        periodo.setText(DiaUtil.formataPeriodo(pacoteSelecionado.getDias()));
 
     }
+
+    @OnClick(R.id.resumo_pacote_realizar_pagamento)
+    public void onClickRealizarpagamento(){
+
+    }
+
 }
