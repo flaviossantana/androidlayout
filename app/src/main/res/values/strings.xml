@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Alura Viagens</string>
-    <string name="DITIGOS_PERMITIDOS_NOME_NO_CARTAO">abcdefghijklmnopqrstuvwxyzçABCDEFGHIJKLMNOPQRSTUVWXYZÇ</string>
+    <string name="DITIGOS_PERMITIDOS_NOME_NO_CARTAO">abcdefghijklmnopqrstuvwxyzçABCDEFGHIJKLMNOPQRSTUVWXYZÇ\u0020</string>
     <string name="PAGAMENTO_ORIENTACAO">Digite as informações do cartão de crédito que você deseja usar para o pagamento.</string>
     <string name="valor_da_compra">Valor da compra:</string>
     <string name="numero_do_cartao">Número do Cartão</string>

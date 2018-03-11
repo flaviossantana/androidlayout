@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.alura.androilayout.ResumoCompraActivity">
+
+    <ImageView
+        android:id="@+id/resumo_compra_fundo"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:color/holo_orange_dark" />
+
+    <TextView
+        android:id="@+id/resumo_compra_parabens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parabéns!"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/resumo_compra_msg_sucesso"
+        app:layout_constraintStart_toStartOf="@+id/resumo_compra_msg_sucesso"
+        app:layout_constraintTop_toTopOf="@+id/resumo_compra_fundo"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/resumo_compra_msg_sucesso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Compra realizada com sucesso :)"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_compra_parabens"
+        tools:layout_editor_absoluteX="72dp" />
+
+    <TextView
+        android:id="@+id/resumo_compra_texto_confira"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Confira o resumo da compra:"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_compra_fundo" />
+
+    <ImageView
+        android:id="@+id/resumo_compra_imagem"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_compra_texto_confira"
+        tools:src="@drawable/rio_de_janeiro_rj" />
+
+    <TextView
+        android:id="@+id/resumo_compra_local"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_compra_imagem"
+        tools:text="São Paulo" />
+
+    <TextView
+        android:id="@+id/resumo_compra_periodo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/resumo_compra_local"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_compra_local"
+        tools:text="08/12 - 25/12 de 2018" />
+
+    <TextView
+        android:id="@+id/resumo_compra_valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/resumo_compra_periodo"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_compra_periodo"
+        tools:text="R$ 249,51" />
+
+
+</android.support.constraint.ConstraintLayout>

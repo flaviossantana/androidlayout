@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ResumoPacoteActivity" />
-        <activity android:name=".PagamentoActivity"></activity>
+        <activity android:name=".PagamentoActivity" />
+        <activity android:name=".ResumoCompraActivity"></activity>
     </application>
 
 </manifest>

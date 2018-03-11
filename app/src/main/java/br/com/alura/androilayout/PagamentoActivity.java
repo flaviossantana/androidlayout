@@ -1,5 +1,6 @@
 package br.com.alura.androilayout;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -52,7 +53,9 @@ public class PagamentoActivity extends AppCompatActivity {
     @OnClick(R.id.pagamento_finalizar_compra)
     public void onClickFinalizaraCompra(){
 
-
+        Intent irResumoCompra = new Intent(this, ResumoCompraActivity.class);
+        irResumoCompra.putExtra("pacote", pacote);
+        startActivity(irResumoCompra);
 
     }
 
