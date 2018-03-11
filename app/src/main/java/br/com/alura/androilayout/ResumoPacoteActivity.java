@@ -6,6 +6,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import br.com.alura.androilayout.adapter.DiaUtil;
 import br.com.alura.androilayout.adapter.ImagemUtil;
@@ -36,6 +38,7 @@ public class ResumoPacoteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resumo_pacote);
+        setTitle("Resumo do Pacote");
         ButterKnife.bind(this);
 
         Bundle extras = getIntent().getExtras();
@@ -45,7 +48,7 @@ public class ResumoPacoteActivity extends AppCompatActivity {
         dias.setText(DiaUtil.formatarDias(pacote.getDias()));
         precoFinal.setText(MoedaUtil.formatarValor(pacote.getValor()));
         imagem.setImageDrawable(ImagemUtil.recuperarImagem(this, pacote.getImagem()));
-        periodo.setText("08/12 - 15/12 de 2018");
+        periodo.setText(DiaUtil.formataPeriodo(pacote.getDias()));
 
     }
 }
