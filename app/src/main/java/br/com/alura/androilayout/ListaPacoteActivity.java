@@ -1,5 +1,6 @@
 package br.com.alura.androilayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
@@ -29,8 +30,13 @@ public class ListaPacoteActivity extends AppCompatActivity {
 
     @OnItemClick(R.id.lista_pacotes_listview)
     public void onClikListaPacoteListView(int posicao){
-        Pacote itemAtPosition = (Pacote) listaPacoteView.getItemAtPosition(posicao);
-        itemAtPosition.getDias();
+        Pacote pacote = (Pacote) listaPacoteView.getItemAtPosition(posicao);
+        pacote.getDias();
+
+        Intent irResumoPacote = new Intent(this, ResumoPacoteActivity.class);
+        irResumoPacote.putExtra("pacote", pacote);
+        startActivity(irResumoPacote);
+
     }
 
 }

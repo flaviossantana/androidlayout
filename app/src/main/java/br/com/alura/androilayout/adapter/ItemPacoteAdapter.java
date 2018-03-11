@@ -1,7 +1,6 @@
 package br.com.alura.androilayout.adapter;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,14 +9,11 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.util.List;
-import java.util.Locale;
-import java.util.zip.Inflater;
 
 import br.com.alura.androilayout.R;
 import br.com.alura.androilayout.model.Pacote;
+import br.com.alura.androilayout.util.MoedaUtil;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -64,25 +60,22 @@ public class ItemPacoteAdapter extends BaseAdapter {
     }
 
     private void recuperarImagem(Pacote pacote, PacoteHolder pacoteHolder) {
-        Resources resources = context.getResources();
-        int identifier = resources.getIdentifier(pacote.getImagem(), "drawable", context.getPackageName());
-        Drawable drawable = resources.getDrawable(identifier);
+        Drawable drawable = ImagemUtil.recuperarImagem(context, pacote.getImagem());
         pacoteHolder.imagem.setImageDrawable(drawable);
     }
 
     private void formatarValor(Pacote pacote, PacoteHolder pacoteHolder) {
-        NumberFormat formatoBrasileiro = DecimalFormat.getCurrencyInstance(
-                new Locale("pt", "br"));
-        String moedaBrasileira = formatoBrasileiro
-                .format(pacote.getValor())
-                .replace("R$", "R$ ");
-
-        pacoteHolder.valor.setText(moedaBrasileira);
+        String valor = MoedaUtil.formatarValor(pacote.getValor());
+        pacoteHolder.valor.setText(valor);
     }
 
     private void formatarDias(Pacote pacote, PacoteHolder pacoteHolder) {
-        String dias = pacote.getDias() >= 1 ? " Dia" : " Dias";
-        pacoteHolder.dias.setText(pacote.getDias() + dias);
+        String dias = DiaUtil.formatarDias(pacote.getDias());
+        pacoteHolder.dias.setText(dias);
+    }
+
+    public Context getContext() {
+        return context;
     }
 
 

@@ -20,7 +20,6 @@
 
     <TextView
         android:id="@+id/resumo_pacote_local"
-        tools:text="Foz do Iguaçu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -28,13 +27,14 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resumo_pacote_foto"
-        />
+        tools:text="Foz do Iguaçu" />
 
     <TextView
         android:id="@+id/resumo_pacote_dias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:text="2 Dias"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/resumo_pacote_local"
         app:layout_constraintTop_toBottomOf="@+id/resumo_pacote_local"
@@ -64,10 +64,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:text="R$ 234,53"
         android:textColor="@android:color/holo_green_dark"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/resumo_pacote_periodo"
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="R$ 234,53" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/botao_laranja"
+        android:elevation="7dp"
+        android:text="Realizar Pagamento"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.982" />
 </android.support.constraint.ConstraintLayout>
