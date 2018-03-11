@@ -57,4 +57,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pagamento_valor_compra" />
+
+    <EditText
+        android:id="@+id/pagamento_mes"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="MM"
+        android:inputType="number"
+        android:maxLength="2"
+        android:singleLine="true"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/pagamento_nmumero_cartao"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_nmumero_cartao" />
+
+    <EditText
+        android:id="@+id/pagamento_ano"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="AA"
+        android:inputType="number"
+        android:maxLength="2"
+        android:singleLine="true"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/pagamento_mes"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_nmumero_cartao" />
+
 </android.support.constraint.ConstraintLayout>
