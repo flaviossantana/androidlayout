@@ -56,6 +56,7 @@ public class PagamentoActivity extends AppCompatActivity {
         Intent irResumoCompra = new Intent(this, ResumoCompraActivity.class);
         irResumoCompra.putExtra("pacote", pacote);
         startActivity(irResumoCompra);
+        finish();
 
     }
 
