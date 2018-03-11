@@ -42,10 +42,13 @@
 
     <TextView
         android:id="@+id/resumo_pacote_periodo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/resumo_pacote_preco_final"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="@+id/resumo_pacote_dias"
         app:layout_constraintTop_toBottomOf="@+id/resumo_pacote_dias"
         tools:text="08/12 - 15/12 de 2018" />
@@ -61,15 +64,19 @@
 
     <TextView
         android:id="@+id/resumo_pacote_preco_final"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:layout_marginEnd="8dp"
         android:text="R$ 234,53"
+        android:textAlignment="viewEnd"
         android:textColor="@android:color/holo_green_dark"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/resumo_pacote_periodo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/resumo_pacote_periodo"
         tools:text="R$ 234,53" />
 
     <Button
