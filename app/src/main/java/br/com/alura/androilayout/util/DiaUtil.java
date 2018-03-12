@@ -1,4 +1,4 @@
-package br.com.alura.androilayout.adapter;
+package br.com.alura.androilayout.util;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

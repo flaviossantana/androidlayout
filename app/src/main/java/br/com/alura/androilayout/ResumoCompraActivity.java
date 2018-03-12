@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import br.com.alura.androilayout.adapter.DiaUtil;
-import br.com.alura.androilayout.adapter.ImagemUtil;
+import br.com.alura.androilayout.util.DiaUtil;
+import br.com.alura.androilayout.util.ImagemUtil;
 import br.com.alura.androilayout.model.Pacote;
 import br.com.alura.androilayout.util.MoedaUtil;
 import butterknife.BindView;

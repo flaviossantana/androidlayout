@@ -1,9 +1,10 @@
-package br.com.alura.androilayout.adapter;
+package br.com.alura.androilayout.util;
 
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 
+import br.com.alura.androilayout.adapter.ItemPacoteAdapter;
 import br.com.alura.androilayout.model.Pacote;
 
 public class ImagemUtil {

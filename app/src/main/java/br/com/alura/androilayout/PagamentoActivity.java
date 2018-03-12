@@ -10,7 +10,11 @@ import android.widget.TextView;
 
 import com.mobsandgeeks.saripaar.ValidationError;
 import com.mobsandgeeks.saripaar.Validator;
+import com.mobsandgeeks.saripaar.annotation.Length;
+import com.mobsandgeeks.saripaar.annotation.Max;
+import com.mobsandgeeks.saripaar.annotation.Min;
 import com.mobsandgeeks.saripaar.annotation.NotEmpty;
+import com.mobsandgeeks.saripaar.annotation.Or;
 import com.mobsandgeeks.saripaar.annotation.Order;
 
 import java.util.Arrays;
@@ -37,7 +41,7 @@ public class PagamentoActivity extends AppCompatActivity implements Validator.Va
     EditText numeroCartao;
 
     @Order(2)
-    @NotEmpty(message = "Informe o mês do vencimento do cartão.")
+    @NotEmpty(message = "Informe o mês do vencimento do cartão.", sequence = 1)
     @BindView(R.id.pagamento_mes)
     EditText mesCartao;
 

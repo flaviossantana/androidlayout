@@ -7,12 +7,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.Serializable;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-
-import br.com.alura.androilayout.adapter.DiaUtil;
-import br.com.alura.androilayout.adapter.ImagemUtil;
+import br.com.alura.androilayout.util.DiaUtil;
+import br.com.alura.androilayout.util.ImagemUtil;
 import br.com.alura.androilayout.model.Pacote;
 import br.com.alura.androilayout.util.MoedaUtil;
 import butterknife.BindView;

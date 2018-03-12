@@ -13,6 +13,8 @@ import java.util.List;
 
 import br.com.alura.androilayout.R;
 import br.com.alura.androilayout.model.Pacote;
+import br.com.alura.androilayout.util.DiaUtil;
+import br.com.alura.androilayout.util.ImagemUtil;
 import br.com.alura.androilayout.util.MoedaUtil;
 import butterknife.BindView;
 import butterknife.ButterKnife;
